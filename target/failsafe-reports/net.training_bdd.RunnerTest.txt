@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: net.training_bdd.RunnerTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 2, Skipped: 2, Time elapsed: 3.366 sec <<< FAILURE! - in net.training_bdd.RunnerTest
+Given the user is on the Google home page(Scenario: Make a Google search)  Time elapsed: 0.004 sec  <<< ERROR!
+java.lang.NullPointerException
+
+Scenario: Make a Google search  Time elapsed: 0.005 sec  <<< ERROR!
+java.lang.NullPointerException
+
