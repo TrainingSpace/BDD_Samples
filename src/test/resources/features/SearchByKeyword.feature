@@ -7,8 +7,20 @@ Feature: Search for definitions
   As a user
   I want to be able to look up the meaning of the word
 
-  @GoogleSearch
-  Scenario: Make a Google search
-    Given the user is on the Google home page
+  @HardCodedSearch
+  Scenario: Make a default Google search
+    Given the user navigates to Google home page
+    When the user performs a search for 'Cucumber BDD'
+    Then they should see that the search was performed
+
+  @EnvironmentVariableSearch
+  Scenario: Make a Google search using environment variables
+    Given Google home page URL is provided using environment variables
+    When the user performs a search for 'Cucumber BDD'
+    Then they should see that the search was performed
+
+  @PropertiesFileSearch
+  Scenario: Make a Google search using a properties file
+    Given Google home page URL is provided using a properties file
     When the user performs a search for 'Cucumber BDD'
     Then they should see that the search was performed

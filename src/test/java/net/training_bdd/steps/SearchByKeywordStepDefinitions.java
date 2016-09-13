@@ -1,5 +1,6 @@
 package net.training_bdd.steps;
 
+import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -21,8 +22,8 @@ public class SearchByKeywordStepDefinitions {
 
     WebDriver driver;
 
-    @Given("the user is on the Google home page")
-    public void theUserIsOnTheGoogleHomePage() throws IOException {
+    @Given("the user navigates to Google home page")
+    public void theUserIsOnTheGoogleHomePage() throws Throwable {
 
         String targetURL;
 
@@ -30,15 +31,43 @@ public class SearchByKeywordStepDefinitions {
         driver.manage().window().maximize();
 
         /* If the target URL will never change you can embed it in the code, like the example below: */
-        //targetURL = "http://www.google.com";
+        targetURL = "http://www.google.com";
+
+        driver.get(targetURL);
+        System.out.println("\ntarget URL set as " + targetURL + " using the hard coded method.\n");
+
+    }
+
+
+    @Given("Google home page URL is provided using environment variables")
+    public void googleHomePageURLIsProvidedUsingEnvironmentVariables() throws Throwable {
+
+        String targetURL;
+
+        driver = new FirefoxDriver();
+        driver.manage().window().maximize();
 
         /* If you need to pass the target URL using an argument, you could do it using an environment variable */
-        //targetURL = System.getenv("target_url");
+        targetURL = System.getenv("target_url");
+
+        driver.get(targetURL);
+        System.out.println("\ntarget URL set as " + targetURL + " using environment variables.\n");
+
+    }
+
+    @Given("Google home page URL is provided using a properties file")
+    public void googleHomePageURLIsProvidedUsingAPropertiesFile() throws Throwable {
+
+        String targetURL;
+
+        driver = new FirefoxDriver();
+        driver.manage().window().maximize();
 
         /* Alternatively you can pass the target URL using a properties file */
         targetURL = (new SearchByKeywordGetPropertyValues().getProperties().getProperty("target_url"));
 
         driver.get(targetURL);
+        System.out.println("\ntarget URL set as " + targetURL + " using a properties file.\n");
 
     }
 
@@ -78,12 +107,6 @@ public class SearchByKeywordStepDefinitions {
 
                 }
 
-
-                // get the property value and print it out
-                String targetURL = prop.getProperty("target_url");
-
-
-                System.out.println("\ntarget URL set as " + targetURL);
             } catch (Exception e) {
 
                 System.out.println("Exception: " + e);

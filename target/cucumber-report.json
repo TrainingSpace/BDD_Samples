@@ -18,19 +18,19 @@
     "elements": [
       {
         "line": 11,
-        "name": "Make a Google search",
+        "name": "Make a default Google search",
         "description": "",
-        "id": "search-for-definitions;make-a-google-search",
+        "id": "search-for-definitions;make-a-default-google-search",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 4477191314,
+              "duration": 4116752211,
               "status": "passed"
             },
             "line": 12,
-            "name": "the user is on the Google home page",
+            "name": "the user navigates to Google home page",
             "match": {
               "location": "SearchByKeywordStepDefinitions.theUserIsOnTheGoogleHomePage()"
             },
@@ -38,7 +38,7 @@
           },
           {
             "result": {
-              "duration": 276523846,
+              "duration": 262561010,
               "status": "passed"
             },
             "line": 13,
@@ -56,7 +56,7 @@
           },
           {
             "result": {
-              "duration": 34968982,
+              "duration": 33755843,
               "status": "passed"
             },
             "line": 14,
@@ -70,7 +70,123 @@
         "tags": [
           {
             "line": 10,
-            "name": "@GoogleSearch"
+            "name": "@HardCodedSearch"
+          }
+        ]
+      },
+      {
+        "line": 17,
+        "name": "Make a Google search using environment variables",
+        "description": "",
+        "id": "search-for-definitions;make-a-google-search-using-environment-variables",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3573402997,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "Google home page URL is provided using environment variables",
+            "match": {
+              "location": "SearchByKeywordStepDefinitions.googleHomePageURLIsProvidedUsingEnvironmentVariables()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 270773186,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "the user performs a search for \u0027Cucumber BDD\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Cucumber BDD",
+                  "offset": 32
+                }
+              ],
+              "location": "SearchByKeywordStepDefinitions.theUserPerformsASearchByKeyword(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 13303862,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "they should see that the search was performed",
+            "match": {
+              "location": "SearchByKeywordStepDefinitions.theyShouldSeeThatTheSearchWasPerformed()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 16,
+            "name": "@EnvironmentVariableSearch"
+          }
+        ]
+      },
+      {
+        "line": 23,
+        "name": "Make a Google search using a properties file",
+        "description": "",
+        "id": "search-for-definitions;make-a-google-search-using-a-properties-file",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3511180268,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "Google home page URL is provided using a properties file",
+            "match": {
+              "location": "SearchByKeywordStepDefinitions.googleHomePageURLIsProvidedUsingAPropertiesFile()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 264059965,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "the user performs a search for \u0027Cucumber BDD\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Cucumber BDD",
+                  "offset": 32
+                }
+              ],
+              "location": "SearchByKeywordStepDefinitions.theUserPerformsASearchByKeyword(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 13380662,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "they should see that the search was performed",
+            "match": {
+              "location": "SearchByKeywordStepDefinitions.theyShouldSeeThatTheSearchWasPerformed()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 22,
+            "name": "@PropertiesFileSearch"
           }
         ]
       }

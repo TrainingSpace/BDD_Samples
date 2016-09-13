@@ -1,2 +1,3 @@
-net\training_bdd\steps\SearchByKeywordStepDefinitions.class
 net\training_bdd\RunnerTest.class
+net\training_bdd\steps\SearchByKeywordStepDefinitions$SearchByKeywordGetPropertyValues.class
+net\training_bdd\steps\SearchByKeywordStepDefinitions.class
