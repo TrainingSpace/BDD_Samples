@@ -30,9 +30,13 @@ public class SearchByKeywordStepDefinitions {
 
         String targetURL;
 
-        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-
-        driver = new ChromeDriver();
+        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\chromedriver.exe");
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("no-sandbox");
+        options.addArguments("start-maximized");
+        DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+        capabilities.setCapability(ChromeOptions.CAPABILITY, options);
+        driver = new ChromeDriver(capabilities);
 
 //        driver = new FirefoxDriver();
         driver.manage().window().maximize();
@@ -51,7 +55,7 @@ public class SearchByKeywordStepDefinitions {
 
         String targetURL;
 
-        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("no-sandbox");
         options.addArguments("start-maximized");
@@ -75,7 +79,7 @@ public class SearchByKeywordStepDefinitions {
 
         String targetURL;
 
-        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("no-sandbox");
         options.addArguments("start-maximized");
