@@ -108,7 +108,7 @@ public class SearchByKeywordStepDefinitions {
     public void theyShouldSeeThatTheSearchWasPerformed() {
 
         assertThat(driver.getTitle().contains("Google Search"));
-        driver.close();
+        driver.quit();
 
     }
 
