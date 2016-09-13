@@ -7,7 +7,10 @@ import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 
 import java.io.*;
@@ -27,7 +30,15 @@ public class SearchByKeywordStepDefinitions {
 
         String targetURL;
 
-        driver = new FirefoxDriver();
+        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("no-sandbox");
+        options.addArguments("start-maximized");
+        DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+        capabilities.setCapability(ChromeOptions.CAPABILITY, options);
+        driver = new ChromeDriver(capabilities);
+
+//        driver = new FirefoxDriver();
         driver.manage().window().maximize();
 
         /* If the target URL will never change you can embed it in the code, like the example below: */
@@ -44,7 +55,15 @@ public class SearchByKeywordStepDefinitions {
 
         String targetURL;
 
-        driver = new FirefoxDriver();
+        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("no-sandbox");
+        options.addArguments("start-maximized");
+        DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+        capabilities.setCapability(ChromeOptions.CAPABILITY, options);
+        driver = new ChromeDriver(capabilities);
+
+//        driver = new FirefoxDriver();
         driver.manage().window().maximize();
 
         /* If you need to pass the target URL using an argument, you could do it using an environment variable */
@@ -60,7 +79,14 @@ public class SearchByKeywordStepDefinitions {
 
         String targetURL;
 
-        driver = new FirefoxDriver();
+        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("no-sandbox");
+        options.addArguments("start-maximized");
+        DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+        capabilities.setCapability(ChromeOptions.CAPABILITY, options);
+        driver = new ChromeDriver(capabilities);
+//        driver = new FirefoxDriver();
         driver.manage().window().maximize();
 
         /* Alternatively you can pass the target URL using a properties file */
