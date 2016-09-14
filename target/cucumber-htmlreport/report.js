@@ -59,7 +59,7 @@ formatter.match({
   "location": "SearchByKeywordStepDefinitions.theUserIsOnTheGoogleHomePage()"
 });
 formatter.result({
-  "duration": 4116752211,
+  "duration": 4814101919,
   "status": "passed"
 });
 formatter.match({
@@ -72,14 +72,14 @@ formatter.match({
   "location": "SearchByKeywordStepDefinitions.theUserPerformsASearchByKeyword(String)"
 });
 formatter.result({
-  "duration": 262561010,
+  "duration": 81301648,
   "status": "passed"
 });
 formatter.match({
   "location": "SearchByKeywordStepDefinitions.theyShouldSeeThatTheSearchWasPerformed()"
 });
 formatter.result({
-  "duration": 33755843,
+  "duration": 856390389,
   "status": "passed"
 });
 formatter.scenario({
@@ -115,7 +115,7 @@ formatter.match({
   "location": "SearchByKeywordStepDefinitions.googleHomePageURLIsProvidedUsingEnvironmentVariables()"
 });
 formatter.result({
-  "duration": 3573402997,
+  "duration": 4371577206,
   "status": "passed"
 });
 formatter.match({
@@ -128,14 +128,14 @@ formatter.match({
   "location": "SearchByKeywordStepDefinitions.theUserPerformsASearchByKeyword(String)"
 });
 formatter.result({
-  "duration": 270773186,
+  "duration": 74618847,
   "status": "passed"
 });
 formatter.match({
   "location": "SearchByKeywordStepDefinitions.theyShouldSeeThatTheSearchWasPerformed()"
 });
 formatter.result({
-  "duration": 13303862,
+  "duration": 777528571,
   "status": "passed"
 });
 formatter.scenario({
@@ -171,7 +171,7 @@ formatter.match({
   "location": "SearchByKeywordStepDefinitions.googleHomePageURLIsProvidedUsingAPropertiesFile()"
 });
 formatter.result({
-  "duration": 3511180268,
+  "duration": 4052735675,
   "status": "passed"
 });
 formatter.match({
@@ -184,14 +184,14 @@ formatter.match({
   "location": "SearchByKeywordStepDefinitions.theUserPerformsASearchByKeyword(String)"
 });
 formatter.result({
-  "duration": 264059965,
+  "duration": 77439965,
   "status": "passed"
 });
 formatter.match({
   "location": "SearchByKeywordStepDefinitions.theyShouldSeeThatTheSearchWasPerformed()"
 });
 formatter.result({
-  "duration": 13380662,
+  "duration": 777832759,
   "status": "passed"
 });
 });

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="net.training_bdd.RunnerTest" time="4.806" tests="4" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="net.training_bdd.RunnerTest" time="13.863" tests="12" errors="2" skipped="2" failures="0">
   <properties>
     <property name="idea.version" value="2016.2.4"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -11,7 +11,7 @@
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
     <property name="file.encoding.pkg" value="sun.io"/>
-    <property name="idea.launcher.port" value="7534"/>
+    <property name="idea.launcher.port" value="7532"/>
     <property name="user.script" value=""/>
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
@@ -62,8 +62,36 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="Given the user is on the Google home page" classname="Scenario: Make a Google search" time="0.002"/>
-  <testcase name="When the user performs a search for &apos;Cucumber BDD&apos;" classname="Scenario: Make a Google search" time="0"/>
-  <testcase name="Then they should see that the search was performed" classname="Scenario: Make a Google search" time="0"/>
-  <testcase name="Scenario: Make a Google search" classname="Scenario: Make a Google search" time="0"/>
+  <testcase name="Given the user navigates to Google home page" classname="Scenario: Make a default Google search" time="0.001"/>
+  <testcase name="When the user performs a search for &apos;Cucumber BDD&apos;" classname="Scenario: Make a default Google search" time="0"/>
+  <testcase name="Then they should see that the search was performed" classname="Scenario: Make a default Google search" time="0"/>
+  <testcase name="Scenario: Make a default Google search" classname="Scenario: Make a default Google search" time="0"/>
+  <testcase name="Given Google home page URL is provided using environment variables" classname="Scenario: Make a Google search using environment variables" time="0.005">
+    <error message="null value in entry: url=null" type="java.lang.NullPointerException">java.lang.NullPointerException: null value in entry: url=null
+</error>
+    <system-out><![CDATA[
+  @HardCodedSearch
+  Scenario: Make a default Google search               &amp#27;[90m# SearchByKeyword.feature:11&amp#27;[0m
+    &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mthe user navigates to Google home page&amp#27;[0m       &amp#27;[90m# SearchByKeywordStepDefinitions.theUserIsOnTheGoogleHomePage()&amp#27;[0m
+    &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mthe user performs a search for '&amp#27;[0m&amp#27;[32m&amp#27;[1mCucumber BDD&amp#27;[0m&amp#27;[32m'&amp#27;[0m &amp#27;[90m# SearchByKeywordStepDefinitions.theUserPerformsASearchByKeyword(String)&amp#27;[0m
+    &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthey should see that the search was performed&amp#27;[0m &amp#27;[90m# SearchByKeywordStepDefinitions.theyShouldSeeThatTheSearchWasPerformed()&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 2.23.409699 (49b0fa931cda1caad0ae15b7d1b68004acd05129) on port 13330
+Only local connections are allowed.
+]]></system-err>
+  </testcase>
+  <testcase name="Scenario: Make a Google search using environment variables" classname="Scenario: Make a Google search using environment variables" time="0.005">
+    <error message="null value in entry: url=null" type="java.lang.NullPointerException">java.lang.NullPointerException: null value in entry: url=null
+</error>
+  </testcase>
+  <testcase name="When the user performs a search for &apos;Cucumber BDD&apos;" classname="Scenario: Make a Google search using environment variables" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Then they should see that the search was performed" classname="Scenario: Make a Google search using environment variables" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Given Google home page URL is provided using a properties file" classname="Scenario: Make a Google search using a properties file" time="0"/>
+  <testcase name="When the user performs a search for &apos;Cucumber BDD&apos;" classname="Scenario: Make a Google search using a properties file" time="0"/>
+  <testcase name="Then they should see that the search was performed" classname="Scenario: Make a Google search using a properties file" time="0"/>
+  <testcase name="Scenario: Make a Google search using a properties file" classname="Scenario: Make a Google search using a properties file" time="0.001"/>
 </testsuite>
